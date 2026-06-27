@@ -25,6 +25,16 @@ class Manager(Employee):
         return f"{self.name} manages {self.team_size} people in {self.department}."
 
 
+class Trainee(Employee):
+    def __init__(self, name, department, salary, grade, location="Noida"):
+        super().__init__(name, department, salary)
+        self.grade = grade
+        self.location = location
+
+    def __str__(self):
+        return f"{self.name} | {self.department} | ${self.salary} | Grade: {self.grade} | Location: {self.location}"
+
+
 if __name__ == "__main__":
     print("Hello, World!")
     emp = Employee("Alice", "Engineering", 70000)

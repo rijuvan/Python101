@@ -4,7 +4,7 @@ import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'src'))
 
-from hello_employee import Employee, Manager
+from hello_employee import Employee, Manager, Trainee
 
 
 class TestEmployee(unittest.TestCase):
@@ -52,6 +52,37 @@ class TestManager(unittest.TestCase):
 
     def test_is_employee(self):
         self.assertIsInstance(self.mgr, Employee)
+
+
+class TestTrainee(unittest.TestCase):
+    def setUp(self):
+        self.trainee = Trainee("Ravi", "Engineering", 40000, grade="A")
+
+    def test_default_location(self):
+        self.assertEqual(self.trainee.location, "Noida")
+
+    def test_custom_location(self):
+        t = Trainee("Priya", "HR", 35000, grade="B", location="Delhi")
+        self.assertEqual(t.location, "Delhi")
+
+    def test_grade(self):
+        self.assertEqual(self.trainee.grade, "A")
+
+    def test_str(self):
+        result = str(self.trainee)
+        self.assertIn("Ravi", result)
+        self.assertIn("Grade: A", result)
+        self.assertIn("Noida", result)
+
+    def test_is_employee(self):
+        self.assertIsInstance(self.trainee, Employee)
+
+    def test_inherits_greet(self):
+        self.assertEqual(self.trainee.greet(), "Hi, I'm Ravi from Engineering.")
+
+    def test_inherits_give_raise(self):
+        self.trainee.give_raise(5000)
+        self.assertEqual(self.trainee.salary, 45000)
 
 
 if __name__ == '__main__':
