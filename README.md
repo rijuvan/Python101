@@ -49,3 +49,16 @@ python src/hello_employee.py
 ```powershell
 python -m unittest discover -s tests -v
 ```
+
+## .gitignore
+
+The `.gitignore` covers common Python patterns:
+
+- `__pycache__/`, `*.pyc`, `*.pyd` — compiled bytecode
+- `env/`, `.venv/`, `venv/` — virtual environments
+- `.env` — environment variable files
+- `dist/`, `build/`, `*.egg-info/` — packaging artifacts
+- `.coverage`, `htmlcov/`, `.pytest_cache/` — test and coverage outputs
+- `.mypy_cache/`, `.ruff_cache/` — type checker and linter caches
+- `.vscode/`, `.idea/` — IDE folders
+- `.DS_Store`, `Thumbs.db` — OS-generated files
