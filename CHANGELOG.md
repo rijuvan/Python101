@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-27
+
+### Added
+- `Trainee` class as a subclass of `Employee` with `grade` and `location` attributes (default location: Noida)
+- 7 unit tests for the `Trainee` class
+
 ## [1.0.0] - 2026-06-27
 
 ### Added
