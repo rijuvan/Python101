@@ -50,6 +50,11 @@ python src/hello_employee.py
 python -m unittest discover -s tests -v
 ```
 
+## License
+
+This project is licensed under the [MIT License](LICENSE) — free to use for learning and personal purposes.  
+Copyright (c) 2026 Rijuvan Ansari.
+
 ## .gitignore
 
 The `.gitignore` covers common Python patterns:
