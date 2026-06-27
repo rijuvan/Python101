@@ -50,6 +50,20 @@ python src/hello_employee.py
 python -m unittest discover -s tests -v
 ```
 
+## Contributing
+
+This is a personal learning project, but suggestions and improvements are welcome!
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Make your changes and add tests if applicable
+4. Run the test suite: `python -m unittest discover -s tests -v`
+5. Commit your changes: `git commit -m "Add your feature"`
+6. Push to your fork: `git push origin feature/your-feature`
+7. Open a Pull Request
+
+Please make sure all tests pass before submitting a PR.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE) — free to use for learning and personal purposes.  
